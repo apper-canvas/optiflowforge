@@ -95,7 +95,7 @@ const TimeTracking = () => {
     }
   };
 
-  const handleManualEntrySubmit = async (e) => {
+const handleManualEntrySubmit = async (e) => {
     e.preventDefault();
     if (!manualEntry.taskId || !manualEntry.projectId || (!manualEntry.duration && (!manualEntry.startTime || !manualEntry.endTime))) {
       toast.error('Please fill in all required fields');
@@ -114,7 +114,7 @@ const TimeTracking = () => {
       const entry = await timeEntryService.create({
         taskId: manualEntry.taskId,
         projectId: manualEntry.projectId,
-        userId: users[0]?.id || 'user_default',
+        userId: users[0]?.Id || users[0]?.id || 'user_default',
         description: manualEntry.description,
         startTime: manualEntry.startTime ? `2024-01-01T${manualEntry.startTime}:00.000Z` : new Date().toISOString(),
         endTime: manualEntry.endTime ? `2024-01-01T${manualEntry.endTime}:00.000Z` : new Date().toISOString(),
@@ -133,6 +133,7 @@ const TimeTracking = () => {
       
       toast.success('Time entry logged successfully!');
     } catch (err) {
+      console.error('Error creating time entry:', err);
       toast.error('Failed to log time entry');
     }
   };

@@ -105,15 +105,23 @@ const [draggedTask, setDraggedTask] = useState(null);
     }
   };
 
-  const handleCreateTask = async (e) => {
+const handleCreateTask = async (e) => {
     e.preventDefault();
-    if (!newTask.title.trim()) return;
+    if (!newTask.title.trim()) {
+      toast.error('Please enter a task title');
+      return;
+    }
 
     try {
       const createdTask = await taskService.create({
-        ...newTask,
+        title: newTask.title,
+        description: newTask.description,
+        priority: newTask.priority,
+        assignee: newTask.assignee,
+        dueDate: newTask.dueDate,
+        status: newTask.status,
         projectId: 'default',
-        labels: []
+        labels: ''
       });
 
       setTasks(prev => [...prev, createdTask]);
@@ -129,6 +137,7 @@ const [draggedTask, setDraggedTask] = useState(null);
 
       toast.success('Task created successfully!');
     } catch (err) {
+      console.error('Error creating task:', err);
       toast.error('Failed to create task');
     }
   };

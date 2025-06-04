@@ -10,14 +10,17 @@ const ProjectOverview = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  useEffect(() => {
+useEffect(() => {
     const loadProjects = async () => {
       setLoading(true);
+      setError(null);
       try {
         const result = await projectService.getAll();
         setProjects(result || []);
       } catch (err) {
-        setError(err.message);
+        console.error('Failed to load projects:', err);
+        setError(err.message || 'Failed to load projects');
+        setProjects([]);
       } finally {
         setLoading(false);
       }
