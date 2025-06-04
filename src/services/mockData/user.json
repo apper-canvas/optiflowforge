@@ -1,0 +1,107 @@
+[
+  {
+    "id": "user_001",
+    "name": "Alex Rodriguez",
+    "email": "alex.rodriguez@flowforge.com",
+    "avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
+    "role": "Full Stack Developer"
+  },
+  {
+    "id": "user_002",
+    "name": "Sarah Chen",
+    "email": "sarah.chen@flowforge.com",
+    "avatar": "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face",
+    "role": "UX/UI Designer"
+  },
+  {
+    "id": "user_003",
+    "name": "Michael Thompson",
+    "email": "michael.thompson@flowforge.com",
+    "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
+    "role": "Backend Developer"
+  },
+  {
+    "id": "user_004",
+    "name": "Emily Watson",
+    "email": "emily.watson@flowforge.com",
+    "avatar": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
+    "role": "Frontend Developer"
+  },
+  {
+    "id": "user_005",
+    "name": "David Kim",
+    "email": "david.kim@flowforge.com",
+    "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face",
+    "role": "iOS Developer"
+  },
+  {
+    "id": "user_006",
+    "name": "Jessica Martinez",
+    "email": "jessica.martinez@flowforge.com",
+    "avatar": "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=150&h=150&fit=crop&crop=face",
+    "role": "Android Developer"
+  },
+  {
+    "id": "user_007",
+    "name": "Ryan Anderson",
+    "email": "ryan.anderson@flowforge.com",
+    "avatar": "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?w=150&h=150&fit=crop&crop=face",
+    "role": "Data Analyst"
+  },
+  {
+    "id": "user_008",
+    "name": "Lisa Johnson",
+    "email": "lisa.johnson@flowforge.com",
+    "avatar": "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=150&h=150&fit=crop&crop=face",
+    "role": "DevOps Engineer"
+  },
+  {
+    "id": "user_009",
+    "name": "Carlos Mendez",
+    "email": "carlos.mendez@flowforge.com",
+    "avatar": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=150&h=150&fit=crop&crop=face",
+    "role": "Marketing Specialist"
+  },
+  {
+    "id": "user_010",
+    "name": "Amanda Foster",
+    "email": "amanda.foster@flowforge.com",
+    "avatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&crop=face",
+    "role": "Product Manager"
+  },
+  {
+    "id": "user_011",
+    "name": "James Wilson",
+    "email": "james.wilson@flowforge.com",
+    "avatar": "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=150&h=150&fit=crop&crop=face",
+    "role": "Security Engineer"
+  },
+  {
+    "id": "user_012",
+    "name": "Nicole Brown",
+    "email": "nicole.brown@flowforge.com",
+    "avatar": "https://images.unsplash.com/photo-1548142813-039e81afd665?w=150&h=150&fit=crop&crop=face",
+    "role": "API Developer"
+  },
+  {
+    "id": "user_013",
+    "name": "Kevin Lee",
+    "email": "kevin.lee@flowforge.com",
+    "avatar": "https://images.unsplash.com/photo-1507591064344-4c6ce005b128?w=150&h=150&fit=crop&crop=face",
+    "role": "Customer Success"
+  },
+  {
+    "id": "user_014",
+    "name": "Sophie Turner",
+    "email": "sophie.turner@flowforge.com",
+    "avatar": "https://images.unsplash.com/photo-1552058544-f2b08422138a?w=150&h=150&fit=crop&crop=face",
+    "role": "Cloud Architect"
+  },
+  {
+    "id": "user_015",
+    "name": "Marcus Davis",
+    "email": "marcus.davis@flowforge.com",
+    "avatar": "https://images.unsplash.com/photo-1520813792240-56fc4a3765a7?w=150&h=150&fit=crop&crop=face",
+    "role": "Infrastructure Engineer"
+  }
+]

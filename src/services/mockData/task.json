@@ -1,0 +1,167 @@
+[
+  {
+    "id": "task_001",
+    "title": "Design user authentication flow",
+    "description": "Create wireframes and mockups for login, registration, and password reset flows",
+    "status": "todo",
+    "priority": "high",
+    "assignee": "user_002",
+    "dueDate": "2024-02-15",
+    "projectId": "proj_001",
+    "labels": ["design", "ux"]
+  },
+  {
+    "id": "task_002",
+    "title": "Implement shopping cart functionality",
+    "description": "Build the shopping cart with add, remove, and quantity update features",
+    "status": "in-progress",
+    "priority": "high",
+    "assignee": "user_001",
+    "dueDate": "2024-02-20",
+    "projectId": "proj_001",
+    "labels": ["frontend", "react"]
+  },
+  {
+    "id": "task_003",
+    "title": "Set up payment gateway integration",
+    "description": "Integrate Stripe payment processing for secure transactions",
+    "status": "in-progress",
+    "priority": "medium",
+    "assignee": "user_003",
+    "dueDate": "2024-02-25",
+    "projectId": "proj_001",
+    "labels": ["backend", "api"]
+  },
+  {
+    "id": "task_004",
+    "title": "Create product catalog API",
+    "description": "RESTful API endpoints for product management and search functionality",
+    "status": "review",
+    "priority": "high",
+    "assignee": "user_001",
+    "dueDate": "2024-02-18",
+    "projectId": "proj_001",
+    "labels": ["backend", "api"]
+  },
+  {
+    "id": "task_005",
+    "title": "Mobile responsive design",
+    "description": "Ensure all pages are optimized for mobile devices and tablets",
+    "status": "todo",
+    "priority": "medium",
+    "assignee": "user_002",
+    "dueDate": "2024-03-01",
+    "projectId": "proj_001",
+    "labels": ["frontend", "responsive"]
+  },
+  {
+    "id": "task_006",
+    "title": "User profile management",
+    "description": "Allow users to update their profile information and preferences",
+    "status": "done",
+    "priority": "low",
+    "assignee": "user_004",
+    "dueDate": "2024-02-10",
+    "projectId": "proj_001",
+    "labels": ["frontend", "user-management"]
+  },
+  {
+    "id": "task_007",
+    "title": "Database schema optimization",
+    "description": "Optimize database queries and implement proper indexing for better performance",
+    "status": "in-progress",
+    "priority": "medium",
+    "assignee": "user_003",
+    "dueDate": "2024-02-22",
+    "projectId": "proj_001",
+    "labels": ["database", "performance"]
+  },
+  {
+    "id": "task_008",
+    "title": "Implement search functionality",
+    "description": "Add product search with filters and sorting options",
+    "status": "todo",
+    "priority": "high",
+    "assignee": "user_001",
+    "dueDate": "2024-02-28",
+    "projectId": "proj_001",
+    "labels": ["frontend", "search"]
+  },
+  {
+    "id": "task_009",
+    "title": "Email notification system",
+    "description": "Set up automated email notifications for order confirmations and updates",
+    "status": "review",
+    "priority": "medium",
+    "assignee": "user_003",
+    "dueDate": "2024-02-24",
+    "projectId": "proj_001",
+    "labels": ["backend", "notifications"]
+  },
+  {
+    "id": "task_010",
+    "title": "Admin dashboard analytics",
+    "description": "Create analytics dashboard for sales, user engagement, and performance metrics",
+    "status": "todo",
+    "priority": "low",
+    "assignee": "user_007",
+    "dueDate": "2024-03-05",
+    "projectId": "proj_003",
+    "labels": ["analytics", "dashboard"]
+  },
+  {
+    "id": "task_011",
+    "title": "iOS app authentication",
+    "description": "Implement secure authentication for iOS mobile application",
+    "status": "in-progress",
+    "priority": "high",
+    "assignee": "user_005",
+    "dueDate": "2024-02-26",
+    "projectId": "proj_002",
+    "labels": ["mobile", "ios", "auth"]
+  },
+  {
+    "id": "task_012",
+    "title": "Android push notifications",
+    "description": "Set up Firebase push notifications for Android app",
+    "status": "done",
+    "priority": "medium",
+    "assignee": "user_006",
+    "dueDate": "2024-02-12",
+    "projectId": "proj_002",
+    "labels": ["mobile", "android", "notifications"]
+  },
+  {
+    "id": "task_013",
+    "title": "API rate limiting",
+    "description": "Implement rate limiting to prevent API abuse and ensure fair usage",
+    "status": "review",
+    "priority": "high",
+    "assignee": "user_008",
+    "dueDate": "2024-02-19",
+    "projectId": "proj_006",
+    "labels": ["api", "security"]
+  },
+  {
+    "id": "task_014",
+    "title": "Customer feedback widget",
+    "description": "Develop feedback collection widget for customer satisfaction surveys",
+    "status": "todo",
+    "priority": "low",
+    "assignee": "user_004",
+    "dueDate": "2024-03-10",
+    "projectId": "proj_007",
+    "labels": ["frontend", "feedback"]
+  },
+  {
+    "id": "task_015",
+    "title": "Data encryption implementation",
+    "description": "Implement end-to-end encryption for sensitive customer data",
+    "status": "in-progress",
+    "priority": "high",
+    "assignee": "user_011",
+    "dueDate": "2024-02-29",
+    "projectId": "proj_005",
+    "labels": ["security", "encryption"]
+  }
+]

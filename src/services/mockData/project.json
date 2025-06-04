@@ -1,0 +1,82 @@
+[
+  {
+    "id": "proj_001",
+    "name": "E-commerce Platform Redesign",
+    "description": "Complete overhaul of the existing e-commerce platform with modern UI/UX, improved performance, and mobile-first approach",
+    "status": "active",
+    "startDate": "2024-01-15",
+    "endDate": "2024-04-30",
+    "progress": 68,
+    "teamMembers": ["user_001", "user_002", "user_003", "user_004"]
+  },
+  {
+    "id": "proj_002",
+    "name": "Mobile App Development",
+    "description": "Native iOS and Android application for customer engagement and order tracking",
+    "status": "active",
+    "startDate": "2024-02-01",
+    "endDate": "2024-06-15",
+    "progress": 34,
+    "teamMembers": ["user_002", "user_005", "user_006"]
+  },
+  {
+    "id": "proj_003",
+    "name": "Data Analytics Dashboard",
+    "description": "Real-time analytics dashboard for business intelligence and performance tracking",
+    "status": "completed",
+    "startDate": "2023-11-01",
+    "endDate": "2024-01-31",
+    "progress": 100,
+    "teamMembers": ["user_001", "user_007", "user_008"]
+  },
+  {
+    "id": "proj_004",
+    "name": "Marketing Automation System",
+    "description": "Automated marketing workflows and customer segmentation platform",
+    "status": "active",
+    "startDate": "2024-03-01",
+    "endDate": "2024-07-31",
+    "progress": 23,
+    "teamMembers": ["user_003", "user_009", "user_010"]
+  },
+  {
+    "id": "proj_005",
+    "name": "Security Audit & Compliance",
+    "description": "Comprehensive security assessment and GDPR compliance implementation",
+    "status": "on-hold",
+    "startDate": "2024-02-15",
+    "endDate": "2024-05-15",
+    "progress": 45,
+    "teamMembers": ["user_007", "user_011"]
+  },
+  {
+    "id": "proj_006",
+    "name": "API Gateway Integration",
+    "description": "Microservices architecture implementation with centralized API management",
+    "status": "active",
+    "startDate": "2024-01-01",
+    "endDate": "2024-05-30",
+    "progress": 72,
+    "teamMembers": ["user_001", "user_008", "user_012"]
+  },
+  {
+    "id": "proj_007",
+    "name": "Customer Support Portal",
+    "description": "Self-service customer support platform with knowledge base and ticketing system",
+    "status": "planning",
+    "startDate": "2024-04-01",
+    "endDate": "2024-08-31",
+    "progress": 5,
+    "teamMembers": ["user_004", "user_013"]
+  },
+  {
+    "id": "proj_008",
+    "name": "Cloud Migration Initiative",
+    "description": "Migration of legacy systems to cloud infrastructure with scalability improvements",
+    "status": "active",
+    "startDate": "2024-02-01",
+    "endDate": "2024-09-30",
+    "progress": 28,
+    "teamMembers": ["user_008", "user_011", "user_014", "user_015"]
+  }
+]
