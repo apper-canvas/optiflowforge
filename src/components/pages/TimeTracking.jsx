@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { toast } from 'react-toastify';
+import { toast } from 'react-hot-toast';
 import { motion } from 'framer-motion';
 import AppHeader from '../organisms/AppHeader';
 import Button from '../atoms/Button';
@@ -111,10 +111,10 @@ const handleManualEntrySubmit = async (e) => {
         duration = (end - start) / 1000;
       }
 
-      const entry = await timeEntryService.create({
+const entry = await timeEntryService.create({
         taskId: manualEntry.taskId,
         projectId: manualEntry.projectId,
-        userId: users[0]?.Id || users[0]?.id || 'user_default',
+        userId: users[0]?.Id || users[0]?.id || users[0]?.ID || 'user_default',
         description: manualEntry.description,
         startTime: manualEntry.startTime ? `2024-01-01T${manualEntry.startTime}:00.000Z` : new Date().toISOString(),
         endTime: manualEntry.endTime ? `2024-01-01T${manualEntry.endTime}:00.000Z` : new Date().toISOString(),
@@ -179,9 +179,9 @@ const handleManualEntrySubmit = async (e) => {
     return project?.name || 'Unknown Project';
   };
 
-  const getUserName = (userId) => {
-    const user = users.find(u => u.id === userId);
-    return user?.name || 'Unknown User';
+const getUserName = (userId) => {
+    const user = users.find(u => u.id === userId || u.Id === userId || u.ID === userId);
+    return user?.name || user?.Name || 'Unknown User';
   };
 
   const filteredTimeEntries = timeEntries.filter(entry => {
