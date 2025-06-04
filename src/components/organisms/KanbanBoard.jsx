@@ -6,16 +6,17 @@ import Button from '../atoms/Button';
 import TaskCard from '../molecules/TaskCard';
 import TaskCreationModal from './TaskCreationModal';
 import TaskDetailModal from './TaskDetailModal';
-import { taskService, userService } from '../../services';
+import { taskService, userService, timeEntryService } from '../../services';
 
 const KanbanBoard = () => {
   const [tasks, setTasks] = useState([]);
   const [users, setUsers] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
-  const [draggedTask, setDraggedTask] = useState(null);
+const [draggedTask, setDraggedTask] = useState(null);
   const [showTaskModal, setShowTaskModal] = useState(false);
   const [selectedTask, setSelectedTask] = useState(null);
+  const [activeTimers, setActiveTimers] = useState(new Map());
   const [newTask, setNewTask] = useState({
     title: '',
     description: '',
@@ -151,8 +152,43 @@ const KanbanBoard = () => {
     });
   };
 
-  const isOverdue = (dueDate) => {
+const isOverdue = (dueDate) => {
     return new Date(dueDate) < new Date() && dueDate;
+  };
+
+  const handleStartTimer = async (taskId) => {
+    try {
+      const currentUser = users[0]?.id || 'user_default'; // Default to first user for demo
+      const task = tasks.find(t => t.id === taskId);
+      const timer = await timeEntryService.startTimer(taskId, currentUser, task?.projectId || 'default');
+      
+      setActiveTimers(prev => new Map(prev.set(`${taskId}_${currentUser}`, timer)));
+      toast.success('Timer started!');
+    } catch (err) {
+      toast.error(err.message || 'Failed to start timer');
+    }
+  };
+
+  const handleStopTimer = async (taskId) => {
+    try {
+      const currentUser = users[0]?.id || 'user_default';
+      const timeEntry = await timeEntryService.stopTimer(taskId, currentUser, '');
+      
+      setActiveTimers(prev => {
+        const newMap = new Map(prev);
+        newMap.delete(`${taskId}_${currentUser}`);
+        return newMap;
+      });
+      
+      toast.success(`Time logged: ${Math.round(timeEntry.duration / 60)} minutes`);
+    } catch (err) {
+      toast.error(err.message || 'Failed to stop timer');
+    }
+  };
+
+  const getActiveTimer = (taskId) => {
+    const currentUser = users[0]?.id || 'user_default';
+    return activeTimers.get(`${taskId}_${currentUser}`);
   };
 
   if (loading) {
@@ -261,9 +297,10 @@ const KanbanBoard = () => {
         onClose={() => setSelectedTask(null)}
         getAssigneeAvatar={getAssigneeAvatar}
         getAssigneeName={getAssigneeName}
-        getPriorityColor={getPriorityColor}
+getPriorityColor={getPriorityColor}
         isOverdue={isOverdue}
         handleDeleteTask={handleDeleteTask}
+        timeEntryService={timeEntryService}
       />
     </div>
   );

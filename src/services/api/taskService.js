@@ -41,6 +41,31 @@ class TaskService {
     
     const deleted = taskData.splice(index, 1)[0]
     return { ...deleted }
+}
+
+  async getTimeEntries(taskId) {
+    await delay(250)
+    // This would typically call timeEntryService, but we'll simulate the data
+    const timeEntryService = await import('./timeEntryService.js')
+    return timeEntryService.default.getByTaskId(taskId)
+  }
+
+  async getTotalTime(taskId) {
+    const timeEntries = await this.getTimeEntries(taskId)
+    return timeEntries.reduce((total, entry) => total + (entry.duration || 0), 0)
+  }
+
+  async getTasksWithTimeData() {
+    await delay(350)
+    const tasks = [...taskData]
+    
+    for (const task of tasks) {
+      const timeEntries = await this.getTimeEntries(task.id)
+      task.totalTime = timeEntries.reduce((total, entry) => total + (entry.duration || 0), 0)
+      task.timeEntries = timeEntries
+    }
+    
+    return tasks
   }
 }
 

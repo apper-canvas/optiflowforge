@@ -41,6 +41,27 @@ class UserService {
     
     const deleted = userData.splice(index, 1)[0]
     return { ...deleted }
+}
+
+  async getUserTimeEntries(userId) {
+    await delay(250)
+    // This would typically call timeEntryService, but we'll simulate the data
+    const timeEntryService = await import('./timeEntryService.js')
+    return timeEntryService.default.getByUserId(userId)
+  }
+
+  async getUserTotalTime(userId, dateRange = null) {
+    const timeEntries = await this.getUserTimeEntries(userId)
+    let filteredEntries = timeEntries
+    
+    if (dateRange) {
+      filteredEntries = timeEntries.filter(entry => {
+        const entryDate = new Date(entry.startTime)
+        return entryDate >= dateRange.start && entryDate <= dateRange.end
+      })
+    }
+    
+    return filteredEntries.reduce((total, entry) => total + (entry.duration || 0), 0)
   }
 }
 
