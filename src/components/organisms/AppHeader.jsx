@@ -37,12 +37,12 @@ const AppHeader = () => {
                 {item.label}
               </HeaderNavButton>
             ))}
-          </nav>
+</nav>
 
           {/* Mobile menu button */}
           <div className="md:hidden">
             <button className="p-2 rounded-lg hover:bg-white/50 transition-colors">
-              <ApperIcon name="Menu" className="w-6 h-6 text-surface-700" />
+              <ApperIcon name="Menu" className="w-5 h-5" />
             </button>
           </div>
         </div>
