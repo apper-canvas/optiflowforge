@@ -4,9 +4,8 @@ import AppHeader from '../organisms/AppHeader';
 import WelcomeSection from '../molecules/WelcomeSection';
 import ProjectOverview from '../organisms/ProjectOverview';
 import KanbanBoard from '../organisms/KanbanBoard';
-import ApperIcon from '../atoms/ApperIcon';
+import ApperIcon from '../ApperIcon';
 import { toast } from 'react-hot-toast';
-
 // Time Entry Service
 const timeEntryService = {
   getAll: async () => {
