@@ -2,8 +2,8 @@ import { Routes, Route } from 'react-router-dom'
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
 import HomePage from './components/pages/HomePage';
+import TimeTracking from './components/pages/TimeTracking';
 import NotFound from './pages/NotFound'
-
 function App() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">

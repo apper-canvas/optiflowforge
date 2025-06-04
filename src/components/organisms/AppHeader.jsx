@@ -1,33 +1,53 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import Icon from '../atoms/Icon';
-import Avatar from '../atoms/Avatar';
+import { Link, useLocation } from 'react-router-dom';
+import ApperIcon from '../ApperIcon';
 import HeaderNavButton from '../molecules/HeaderNavButton';
 
 const AppHeader = () => {
+  const location = useLocation();
+
+  const navItems = [
+    { path: '/', label: 'Dashboard', icon: 'Home' },
+    { path: '/time-tracking', label: 'Time Tracking', icon: 'Clock' }
+  ];
+
   return (
-    <motion.header
-      className="glass sticky top-0 z-50 px-4 sm:px-6 lg:px-8 py-4 border-b border-white/20"
-      initial={{ y: -100, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
-    >
-      <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <div className="flex items-center space-x-3">
-          <Avatar icon="Layers" className="w-10 h-10 shadow-soft" />
-          <div>
-            <h1 className="text-xl font-bold text-surface-900">FlowForge</h1>
-            <p className="text-sm text-surface-600 hidden sm:block">Modern Project Management</p>
+    <header className="glass sticky top-0 z-50 border-b border-white/20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16">
+          {/* Logo */}
+          <Link to="/" className="flex items-center space-x-3">
+            <div className="w-8 h-8 bg-gradient-to-br from-primary to-primary-dark rounded-lg flex items-center justify-center">
+              <ApperIcon name="Zap" className="w-5 h-5 text-white" />
+            </div>
+            <span className="text-xl font-bold bg-gradient-to-r from-primary to-primary-dark bg-clip-text text-transparent">
+              FlowForge
+            </span>
+          </Link>
+
+          {/* Navigation */}
+          <nav className="hidden md:flex items-center space-x-2">
+            {navItems.map((item) => (
+              <HeaderNavButton
+                key={item.path}
+                to={item.path}
+                icon={item.icon}
+                isActive={location.pathname === item.path}
+              >
+                {item.label}
+              </HeaderNavButton>
+            ))}
+          </nav>
+
+          {/* Mobile menu button */}
+          <div className="md:hidden">
+            <button className="p-2 rounded-lg hover:bg-white/50 transition-colors">
+              <ApperIcon name="Menu" className="w-6 h-6 text-surface-700" />
+            </button>
           </div>
         </div>
-
-        <nav className="flex items-center space-x-2 sm:space-x-4">
-          <HeaderNavButton iconName="Search" onClick={() => console.log('Search clicked')} />
-          <HeaderNavButton iconName="Bell" onClick={() => console.log('Notifications clicked')} />
-          <Avatar icon="User" />
-        </nav>
       </div>
-    </motion.header>
+    </header>
   );
 };
 
